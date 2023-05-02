@@ -1,50 +1,49 @@
 
-import react from "react";
+
 import { View,Text, ScrollView,Image,StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
-export default function Gaming_Console(){
+export default function Ps5gaming(){
     const items = [
+       
         {    
-            title:"PS5+FIFA with 2remote-controler",
-            image:require("../../Images/GamingConsole/ps5-console-with-2-controllers.png"),
-            Discription:"Easy to connect, share & play with friends"
+            title:"God Of War",
+            image:require("../../Images/PS5Games/GodOfWar.png"),
+            Discription:"Ultra – comfy bounce back, Waterproof, Protects your ankle, heel & toes; Inner lacing system"
         },
+      
         {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
+            title:"Mafia:Definitive Edition PS4",
+            image:require("../../Images/PS5Games/Mafia.png"),
+            Discription:"stronger than polyester; treated with anti-skid properties"
+        },
+          {    
+            title:"Lego Marvel Superheroes PS4",
+            image:require("../../Images/PS5Games/Marval.png"),
+            Discription:""
+        },
+      
+        {    
+            title:"Uncharted 4: A Thief's End PS4",
+            image:require("../../Images/PS5Games/UNcharted.png"),
             Discription:""
         },
         {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
+            title:"WWE 2K20 PS4",
+            image:require("../../Images/PS5Games/wwe.png"),
             Discription:""
         },
         {    
-            title:"PS4 Controller on rent",
-            image:require("../../Images/GamingConsole/ps4-controller-on-remote.png"),
-            Discription:"Easy to connect, share & play with friends"
+            title:"Mafia:Definitive Edition PS4",
+            image:require("../../Images/PS5Games/Mafia.png"),
+            Discription:"stronger than polyester; treated with anti-skid properties"
         },
-        {    
-            title:"Xbox Controller on rent",
-            image:require("../../Images/GamingConsole/xbox_controller.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"Xbox Series S w/2aaa",
-            image:require("../../Images/GamingConsole/xbox-series.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
+          {    
+            title:"Lego Marvel Superheroes PS4",
+            image:require("../../Images/PS5Games/Marval.png"),
             Discription:""
         },
-        {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
-            Discription:"Easy to connect, share & play with friends"
-        },
+      
     ]
      const style = {
         height:100,
@@ -52,7 +51,7 @@ export default function Gaming_Console(){
      }
     return(
         <View style={Styles.Maincontainer}>
-        <Text style={Styles.text}>Gaming Console</Text>
+        <Text style={Styles.text}>PS4 Games</Text>
      <ScrollView horizontal={true}  persistentScrollbar={true} >
         {
             items.map((item,index)=>(

@@ -1,49 +1,29 @@
 
-import react from "react";
+
 import { View,Text, ScrollView,Image,StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
-export default function Gaming_Console(){
+export default function RidingGear(){
     const items = [
         {    
-            title:"PS5+FIFA with 2remote-controler",
-            image:require("../../Images/GamingConsole/ps5-console-with-2-controllers.png"),
-            Discription:"Easy to connect, share & play with friends"
-        },
-        {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
+            title:"Knee Guards",
+            image:require("../../Images/ridding/knee.png"),
             Discription:""
         },
         {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
+            title:"Riding Boots by Orazo",
+            image:require("../../Images/ridding/orazo.png"),
+            Discription:"Ultra – comfy bounce back, Waterproof, Protects your ankle, heel & toes; Inner lacing system"
+        },
+        {    
+            title:"T100 Boots",
+            image:require("../../Images/ridding/T100.png"),
             Discription:""
         },
         {    
-            title:"PS4 Controller on rent",
-            image:require("../../Images/GamingConsole/ps4-controller-on-remote.png"),
-            Discription:"Easy to connect, share & play with friends"
-        },
-        {    
-            title:"Xbox Controller on rent",
-            image:require("../../Images/GamingConsole/xbox_controller.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"Xbox Series S w/2aaa",
-            image:require("../../Images/GamingConsole/xbox-series.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
-            Discription:""
-        },
-        {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
-            Discription:"Easy to connect, share & play with friends"
+            title:"Riding Boot Covers",
+            image:require("../../Images/ridding/GoPro.png"),
+            Discription:"stronger than polyester; treated with anti-skid properties"
         },
     ]
      const style = {
@@ -52,7 +32,7 @@ export default function Gaming_Console(){
      }
     return(
         <View style={Styles.Maincontainer}>
-        <Text style={Styles.text}>Gaming Console</Text>
+        <Text style={Styles.text}>Riding Gear</Text>
      <ScrollView horizontal={true}  persistentScrollbar={true} >
         {
             items.map((item,index)=>(

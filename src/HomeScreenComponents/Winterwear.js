@@ -1,50 +1,31 @@
 
-import react from "react";
+
 import { View,Text, ScrollView,Image,StyleSheet } from "react-native";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
-export default function Gaming_Console(){
+export default function WinterWear(){
     const items = [
         {    
-            title:"PS5+FIFA with 2remote-controler",
-            image:require("../../Images/GamingConsole/ps5-console-with-2-controllers.png"),
-            Discription:"Easy to connect, share & play with friends"
-        },
-        {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
+            title:"Flees Jacket",
+            image:require("../../Images/Winter_Wear/fleese.png"),
             Discription:""
         },
         {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
+            title:"Men Parka Jacket -15°C to -20°C",
+            image:require("../../Images/Winter_Wear/menparka.png"),
+            Discription:"Ultra – comfy bounce back, Waterproof, Protects your ankle, heel & toes; Inner lacing system"
+        },
+        {    
+            title:"Men Snow Pant",
+            image:require("../../Images/Winter_Wear/mensnowjacket.png"),
             Discription:""
         },
         {    
-            title:"PS4 Controller on rent",
-            image:require("../../Images/GamingConsole/ps4-controller-on-remote.png"),
-            Discription:"Easy to connect, share & play with friends"
+            title:"Rain Poncho",
+            image:require("../../Images/Winter_Wear/RainPocho.png"),
+            Discription:"stronger than polyester; treated with anti-skid properties"
         },
-        {    
-            title:"Xbox Controller on rent",
-            image:require("../../Images/GamingConsole/xbox_controller.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"Xbox Series S w/2aaa",
-            image:require("../../Images/GamingConsole/xbox-series.png"),
-            Discription:"Stronger than polyester; treated with anti-skid properties"
-        },
-        {    
-            title:"PSF Controller on rent",
-            image:require("../../Images/GamingConsole/gaming-console-PS5-controller.png"),
-            Discription:""
-        },
-        {    
-            title:"Rent PS4 Console w/1",
-            image:require("../../Images/GamingConsole/ps4-console-on.png"),
-            Discription:"Easy to connect, share & play with friends"
-        },
+         
     ]
      const style = {
         height:100,
@@ -52,7 +33,7 @@ export default function Gaming_Console(){
      }
     return(
         <View style={Styles.Maincontainer}>
-        <Text style={Styles.text}>Gaming Console</Text>
+        <Text style={Styles.text}>Winter Wear</Text>
      <ScrollView horizontal={true}  persistentScrollbar={true} >
         {
             items.map((item,index)=>(

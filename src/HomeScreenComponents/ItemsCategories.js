@@ -84,6 +84,7 @@ return(
         marginTop:20
          },
          itemcontainer:{
+            backgroundColor:"white",
              height:190,
              width:150,
              alignItems:"center",
