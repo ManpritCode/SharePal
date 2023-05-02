@@ -148,7 +148,7 @@ const Styles = StyleSheet.create({
     Navtext: {
         fontSize: 25,
         fontWeight: "300",
-        marginHorizontal:10
+        marginHorizontal: 10
 
     },
     NavPlaceText: {
@@ -189,7 +189,7 @@ const Styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: "500"
     },
-    Dropdown:{
+    Dropdown: {
         flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "flex-start",

@@ -98,34 +98,34 @@ export default function Review() {
                 {
                     items.map((item, index) => (
                         <View key={index} style={Styles.subcontainer}>
-                            <View style={{}}>
+                            <View>
                                 <View style={Styles.Uppercontainer}>
                                     <View style={Styles.dpcontainer}>
                                         <Image source={item.dpimage} style={Styles.Image}></Image>
                                     </View>
                                     <View style={Styles.locationContainer}>
                                         <Text>{item.name}  , {item.location}</Text>
-                                        <Text style={{lineHeight:30,color:"grey",fontWeight:'400',color:"blue"}}>{item.catogories}</Text>
+                                        <Text style={{ lineHeight: 30, color: "grey", fontWeight: '400', color: "blue" }}>{item.catogories}</Text>
                                     </View>
                                 </View>
                             </View>
                             <View style={{
-                                
+
                                 height: 50,
                                 width: "80%",
                                 alignSelf: "center"
                             }}>
-                                <Text style={{fontWeight:"400",fontSize:15}}>{item.itemtittle}</Text>
-                                <Text style={{fontSize:20,lineHeight:30}}>{item.star}</Text>
+                                <Text style={{ fontWeight: "400", fontSize: 15 }}>{item.itemtittle}</Text>
+                                <Text style={{ fontSize: 20, lineHeight: 30 }}>{item.star}</Text>
                             </View>
                             <View style={{
                                 height: 200,
                                 width: "90%",
-                        
-                                marginVertical:10,
+
+                                marginVertical: 10,
                                 alignSelf: "center"
                             }}>
-                                <Text style={{ lineHeight: 20, textAlign: "justify" ,color:"grey",fontSize:13}}>{item.Disscription}</Text>
+                                <Text style={{ lineHeight: 20, textAlign: "justify", color: "grey", fontSize: 13 }}>{item.Disscription}</Text>
 
                             </View>
                         </View>
@@ -151,7 +151,7 @@ const Styles = StyleSheet.create({
     textcontainer: {
         width: 300,
 
-        
+
         alignItems: "center",
         justifyContent: "center",
 
@@ -170,39 +170,39 @@ const Styles = StyleSheet.create({
         backgroundColor: "white",
         justifyContent: "center",
         top: 10,
-borderWidth:2,
-borderColor:"lightgrey",
+        borderWidth: 1,
+        borderColor: "lightgrey",
         elevation: 9,
         shadowColor: '#52006A',
         borderRadius: 20
     },
     Uppercontainer: {
-       
+
         height: 100,
         width: "90%",
         flexDirection: "row",
         alignSelf: "center",
-        justifyContent:"center"
+        justifyContent: "center"
     },
     dpcontainer: {
-        
-        justifyContent:"center", 
-        alignItems:"center",
-        marginHorizontal:10
+
+        justifyContent: "center",
+        alignItems: "center",
+        marginHorizontal: 10
     },
     Image: {
         resizeMode: "cover",
         height: 70,
-         width: 70,
-         alignSelf:"center",
-         borderWidth:2,
-         borderColor:"blue",
-         borderRadius:40
+        width: 70,
+        alignSelf: "center",
+        borderWidth: 1,
+        borderColor: "blue",
+        borderRadius: 40
 
     },
     locationContainer: {
         flex: 1,
-        justifyContent:"center",
-        marginHorizontal:10,
+        justifyContent: "center",
+        marginHorizontal: 10,
     }
 })

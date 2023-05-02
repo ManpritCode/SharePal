@@ -1,105 +1,106 @@
 import react from "react";
-import {View,Text,StyleSheet, ImageBackground,Image} from "react-native"
+import { View, Text, StyleSheet, ImageBackground, Image } from "react-native"
 
- export default function ItemsCategories(){
-   
+export default function ItemsCategories() {
+
     const items = [
-        {    
-            title:"Trekking Gear",
-            image:require("../../Images/traking.png")
+        {
+            title: "Trekking Gear",
+            image: require("../../Images/traking.png")
         },
-        {    
-            title:"Riding Gear",
-            image:require("../../Images/ridingGear.png")
+        {
+            title: "Riding Gear",
+            image: require("../../Images/ridingGear.png")
         },
-        {    
-            title:"Action Cameras",
-            image:require("../../Images/actioncamera.png")
+        {
+            title: "Action Cameras",
+            image: require("../../Images/actioncamera.png")
         },
-        {    
-            title:"Cameras",
-            image:require("../../Images/camera.png")
+        {
+            title: "Cameras",
+            image: require("../../Images/camera.png")
         },
-        {    
-            title:"Gaming Console",
-            image:require("../../Images/gaming.png")
+        {
+            title: "Gaming Console",
+            image: require("../../Images/gaming.png")
         },
-        {    
-            title:"PS4 Games",
-            image:require("../../Images/ps5.png")
+        {
+            title: "PS4 Games",
+            image: require("../../Images/ps5.png")
         },
-        {    
-            title:"Winter Wear",
-            image:require("../../Images/winter-wear.png")
+        {
+            title: "Winter Wear",
+            image: require("../../Images/winter-wear.png")
         },
     ]
 
-return(
-    <View style={Styles.Maincontainer}>
-        <Text style={Styles.text}>What would you like to rent?</Text>
-        {
-            items.map((item,index)=>(
-                <View key={index} style={Styles.itemcontainer}>
-                    <ImageBackground source={require('../../Images/items.png')}
-                      style={{height:"100%",
-                      width:"100%",
-                      alignItems:"center",
-                      justifyContent:"center",
-                      
-                      }} >
-                    
-                        <Image source={item.image} style={{
-                            height:150,
-                            width:150,
-                            marginTop:10,
-                            resizeMode:"cover"
-                        }}>
+    return (
+        <View style={Styles.Maincontainer}>
+            <Text style={Styles.text}>What would you like to rent?</Text>
+            {
+                items.map((item, index) => (
+                    <View key={index} style={Styles.itemcontainer}>
+                        <ImageBackground source={require('../../Images/items.png')}
+                            style={{
+                                height: "100%",
+                                width: "100%",
+                                alignItems: "center",
+                                justifyContent: "center",
 
-                        </Image>
-                           <Text style={Styles.itemtitle}>{item.title}</Text>
-                    </ImageBackground>
-                </View>
-           ) )
-        }
-    </View>
-)
+                            }} >
 
- }
+                            <Image source={item.image} style={{
+                                height: 150,
+                                width: 150,
+                                marginTop: 10,
+                                resizeMode: "cover"
+                            }}>
 
- const Styles = StyleSheet.create({
-         Maincontainer:{
-            flex:1,
-            width:"100%",
-            backgroundColor:"white",
-            alignItems:"center",
-            flexDirection: "row",
-            flexWrap: "wrap",
-            alignItems: "flex-start",
-            justifyContent:"center",
-          
-         },
-         text:{
-        fontSize:23,
-        fontWeight:"500",
-        marginTop:20
-         },
-         itemcontainer:{
-            backgroundColor:"white",
-             height:190,
-             width:150,
-             alignItems:"center",
-             justifyContent:"center",
-             marginVertical:10,
-             marginHorizontal:20,
-             marginTop:20,
-             elevation: 9,
-             shadowColor: '#52006A',
-             
-         },
-         itemtitle:{
-            fontSize:16,
-            fontWeight:"500",
-            textAlign:"center",
-            
-         }
- })
+                            </Image>
+                            <Text style={Styles.itemtitle}>{item.title}</Text>
+                        </ImageBackground>
+                    </View>
+                ))
+            }
+        </View>
+    )
+
+}
+
+const Styles = StyleSheet.create({
+    Maincontainer: {
+        flex: 1,
+        width: "100%",
+        backgroundColor: "white",
+        alignItems: "center",
+        flexDirection: "row",
+        flexWrap: "wrap",
+        alignItems: "flex-start",
+        justifyContent: "center",
+
+    },
+    text: {
+        fontSize: 23,
+        fontWeight: "500",
+        marginTop: 20
+    },
+    itemcontainer: {
+        backgroundColor: "white",
+        height: 190,
+        width: 150,
+        alignItems: "center",
+        justifyContent: "center",
+        marginVertical: 10,
+        marginHorizontal: 20,
+        marginTop: 20,
+        elevation: 9,
+        shadowColor: '#52006A',
+
+    },
+    itemtitle: {
+        fontSize: 16,
+        fontWeight: "500",
+        textAlign: "center",
+
+    }
+})

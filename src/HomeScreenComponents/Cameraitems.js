@@ -69,7 +69,7 @@ export default function Camera_Items() {
                                 </Image>
                                 <View style={{ height: 50, width: 25, flexDirection: "column", alignItems: "center", justifyContent: "space-around", left: 25 }}>
                                     <Entypo name="heart-outlined" size={25} color="grey" />
-                                    <MaterialCommunityIcons name="share-variant" size={20} color="grey"/>
+                                    <MaterialCommunityIcons name="share-variant" size={20} color="grey" />
                                 </View>
                             </View>
                             <View style={{ alignSelf: "center", margin: 5 }}>

@@ -14,7 +14,7 @@ export default function ImageCrousel() {
             <ImageBackground source={require('../../Images/background1.png')} style={{
                 flex: 1,
                 resizeMode: "cover",
-                justifyContent: 'center', 
+                justifyContent: 'center',
                 alignItems: "center",
                 justifyContent: "space-evenly"
             }}>
@@ -27,22 +27,22 @@ export default function ImageCrousel() {
                     </Text>
                 </TouchableOpacity>
                 <View style={Styles.imagecrousel}>
-                        <SliderBox images={images}
-                            imageLoadingColor="rgba(0,0,0,0)"
-                            firstItem={0}
-                            autoplay={true}
-                            autoplayInterval={2000}
-                            circleLoop={true}
-                            dotColor="blue"
-                             style={{
-                                height: 320,
-                                width:250,
-                                alignItems:"center",
-                                justifyContent:"center",
-                                alignSelf:"center",
-                                marginTop:20
-                            }}
-                        />
+                    <SliderBox images={images}
+                        imageLoadingColor="rgba(0,0,0,0)"
+                        firstItem={0}
+                        autoplay={true}
+                        autoplayInterval={2000}
+                        circleLoop={true}
+                        dotColor="blue"
+                        style={{
+                            height: 320,
+                            width: 250,
+                            alignItems: "center",
+                            justifyContent: "center",
+                            alignSelf: "center",
+                            marginTop: 20
+                        }}
+                    />
                 </View>
             </ImageBackground>
         </View>
@@ -54,7 +54,7 @@ const Styles = StyleSheet.create({
         backgroundColor: "green",
         width: "100%",
         height: 500,
-        
+
         alignSelf: "center"
     },
     Maincontainer: {

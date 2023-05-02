@@ -43,17 +43,17 @@ export default function WhySharePal() {
             </View>
             {
                 Items.map((item, index) => (
-                    
-                        <View key={index} style={Styles.subcontainer}>
-                            <View style={Styles.imagecontainer}>
-                                <Image source={item.Image} style={{ height: 80, width: 75, resizeMode: "contain", }}></Image>
-                            </View>
-                            <View key={index} style={Styles.textcontainer2}>
-                                <Text style={{ color: "rgb(87,87,150)", fontWeight: '500' }}>{item.title}</Text>
-                                <Text style={Styles.text3}>{item.disscription}</Text>
-                            </View>
+
+                    <View key={index} style={Styles.subcontainer}>
+                        <View style={Styles.imagecontainer}>
+                            <Image source={item.Image} style={{ height: 80, width: 75, resizeMode: "contain", }}></Image>
                         </View>
-                    
+                        <View key={index} style={Styles.textcontainer2}>
+                            <Text style={{ color: "rgb(87,87,150)", fontWeight: '500' }}>{item.title}</Text>
+                            <Text style={Styles.text3}>{item.disscription}</Text>
+                        </View>
+                    </View>
+
                 ))
             }
 
