@@ -19,6 +19,7 @@ import java.util.List;
 
 public class MainApplication extends Application implements ReactApplication {
 
+
   private final ReactNativeHost mReactNativeHost =
     new ReactNativeHostWrapper(this, new DefaultReactNativeHost(this) {
       @Override
@@ -72,5 +73,9 @@ public class MainApplication extends Application implements ReactApplication {
   public void onConfigurationChanged(@NonNull Configuration newConfig) {
     super.onConfigurationChanged(newConfig);
     ApplicationLifecycleDispatcher.onConfigurationChanged(this, newConfig);
+  }
+   @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
   }
 }

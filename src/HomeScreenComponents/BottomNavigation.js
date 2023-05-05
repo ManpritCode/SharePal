@@ -56,7 +56,8 @@ const Styles = StyleSheet.create({
     
 
         width:"100%",
-        borderTopWidth:1,
+        borderTopWidth:0.5,
+        borderBottomWidth:0.5,
         alignItems:"center",
         
         
@@ -64,7 +65,7 @@ const Styles = StyleSheet.create({
     maincontainer: {
         height:50,
         
-        backgroundColor: "white",
+        backgroundColor: "",
         flexDirection: "row",
         alignItems: 'center',
 

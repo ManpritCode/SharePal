@@ -17,13 +17,13 @@ import Paragraph from "../src/HomeScreenComponents/paragraph";
 import BottomSection from "../src/HomeScreenComponents/BottomSection";
 import BottomNavigation from "../src/HomeScreenComponents/BottomNavigation";
 import { Dimensions } from 'react-native';
-import { StatusBar } from "expo-status-bar";
+import Buttons from "../src/DetaileScreenComponents/buttons";
 export default function HomeScreen() {
   const windowWidth = Dimensions.get('window').width;
 
   return (
     <>
-      <StatusBar></StatusBar>
+      
       <View style={{ height: "100%", width: windowWidth, }}>
         <Navbar />
         <ScrollView>
@@ -39,6 +39,7 @@ export default function HomeScreen() {
           <Paragraph />
           <BottomSection />
         </ScrollView>
+        <Buttons/>
         <BottomNavigation />
       </View>
     </>
