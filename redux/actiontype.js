@@ -1,0 +1,1 @@
+export const pickdata = "Pick_data";

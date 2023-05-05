@@ -6,6 +6,10 @@ import { View, Text, StyleSheet, Platform, StatusBar, Image, Modal } from "react
 import { AntDesign } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { ScrollView } from "react-native";
+import { useDispatch } from "react-redux";
+import { pickdata } from "../../redux/actiontype";
+import { pickdatatoSelectCity } from "../../redux/action/action";
+
 const Navbar = () => {
     const a = "Raipur"
     const [visible, setVisible] = useState(false);
@@ -16,57 +20,57 @@ const Navbar = () => {
     const handleClose = () => {
         setVisible(false);
     };
-
+    
     const city = [
         {
-            cityname: "Bathinda",
+            cityname: "Bangalore",
+            disscripstion:'Bengaluru, the silicon valley of India is also a start-up hub. SharePal is \n a rental startup for all your lifestyle needs. Be it travel, photography,\n entertainment or fitness, you can rent all the latest products.\nSharepal is a leading rental platform with a pan India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Bangalore.Sharepal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.Our services cover all of Bangalore, some of which are Koramangala, Indiranagar, Marathahalli, Whitefield, Rajajinagar, HSR Layout, BTM Layout, Electronic City, Jayanagar, Aecs Layout, Kundalahalli, K R Puram, Richmond Town, Mahadevapura, Hebbagodi, Ayyappa Nagar, J P Nagar, and even faraway places like Yeshwantpur and Yelahanka.We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Bangalore.Sharepal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.Our services cover all of Bangalore, some of which are Koramangala, Indiranagar, Marathahalli, Whitefield, Rajajinagar, HSR Layout, BTM Layout, Electronic City, Jayanagar, Aecs Layout, Kundalahalli, K R Puram, Richmond Town, Mahadevapura, Hebbagodi, Ayyappa Nagar, J P Nagar, and even faraway places like Yeshwantpur and Yelahanka.'
+        },
+        {
+            cityname: "Munmbai",
+            disscripstion:'The city of Mumbai is a hub of the richest business tycoons of India.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.Sharepal is a leading rental platform with a pan India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Mumbai.Sharepal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Mumbai, including localities such as Navi Mumbai, Thane, Kharghar, Andheri, Mira Road, Bandra, Powai, Parel, Santacruz, Mulund, Dombivli, Chembur, Borivali, kandivali, Malad, Vashi, Dahisar, Kasarvadavali, Boisar, GTB Nagar, Vikhroli and more.'
+        },
+        {
+            cityname: "Delhi",
+            disscripstion:'People of all ages can enjoy Delhi as it has something for everyone to complement their interests.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan-India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Delhi.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Delhi, including localities such as South Delhi, Dwarka, Rohini, Shahdara, Saket, Karol Bagh, Anand Vihar, Chattarpur, Mayur Vihar, Laxmi Nagar, Malviya Nagar, Indirapuram, New Ashok Nagar, Kalkaji, and more.'
+        },
+        {
+            cityname: "Gurgoun",
+            disscripstion:'People of all ages can enjoy Delhi as it has something for everyone to complement their interests.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan-India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Delhi.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Delhi, including localities such as South Delhi, Dwarka, Rohini, Shahdara, Saket, Karol Bagh, Anand Vihar, Chattarpur, Mayur Vihar, Laxmi Nagar, Malviya Nagar, Indirapuram, New Ashok Nagar, Kalkaji, and more.'
+        },
+        {
+            cityname: "Noida",
+            disscripstion:'Noida, a place of industrial development and it’s hub for multinational companies.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Noida. SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures. We offer rental services all over Noida, including localities such as Greater Noida, Vaishali, Noida extension, Ghaziabad, Indirapuram, Vasundhara, Sahibabad, Noida Sector 135, New Ashok Nagar, Noida Sec 52, Noida Sector 62, Noida Sector 44, Noida Sector 45, Noida Sector 22, Noida Sector 137, Noida Sector 71, Noida Sector 74, Noida Sector 75, Noida Sector 76, Noida Sector 78 and more.'
+        },
+        {
+            cityname: "Hyderabad",
+            disscripstion:'Hyderabad is a growing startup hub, and one of India s leading trade centers. SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan-India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Hyderabad.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Hyderabad, including localities such as Kondapur, Gachibowli, Lingampally, Kukatpally, Banjara Hills, Jubilee Hills, or anywhere else.'
+        },
+        {
+            cityname: "Ahmedabad",
+            disscripstion:'Ahmedabad is a well-known place for cotton textile centers in India.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan-India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Ahmedabad.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures. We offer rental services all over Ahmedabad, including localities such as SG Highway, Prahlad Nagar, Gota, Bodakdev, Chandkheda, Mani Nagar, Thaltej, Bopal and South Bopal, Sabarmati, and more.'
+        },
+        {
+            cityname: "Pune",
+            disscripstion:'Pune is well known as the educational hub of India.SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Pune.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Pune, including localities such as Kothru, Kalyani Nagar, Viman Nagar, Hinjewadi, Koregaon Park, Aundh, Shivaji Nagar, Baner, Kondhwa, Pimpri-Chinchwad, Yerwada or anywhere else.'
+        },
+        {
+            cityname: "Channai",
+            disscripstion:'Chennai, one of the best cities to live in India. It’s a city which is well known for its culture and south Indian cuisine. SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.SharePal is a leading rental platform with a pan-India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Chennai.SharePal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.We offer rental services all over Chennai including the places such as Mylapore, Velacheri, Perambur, Guindy, Egmore, Mambalam, Royapettah,T.Nagar, Nungambakkam, Koyambedu,Meenambakkam or anywhere else in Chennai.'
+        },
+        {   cityname:"Dehradoon",
+            disscripstion: "SharePal is a rental startup for all your lifestyle needs. Be it travel, photography, entertainment or fitness, you can rent all the latest products.Sharepal is a leading rental platform with a pan India presence. We offer Trekking Gear, Riding Gear, DSLR Camera, GoPro Camera, PS4 Console, Xbox Console, PS4 Games on rent in Dehradun.Sharepal makes it easier for you to rent from us. All you need to do is choose the product whatever you need, add them to your cart, and check out. Rental products will be delivered to your home with full safety measures.Our services cover all of Dehradun, some of which are Dehradun Railway Station, Dehradun ISBT, Patel Nagar.",
+        },
 
-        },
-        {
-            cityname: "Moga",
-        },
-        {
-            cityname: "Dehradoon",
-        },
-        {
-            cityname: "Amritsar",
-        },
-        {
-            cityname: "Sangrur",
-        },
-        {
-            cityname: "Bathinda",
-
-        },
-        {
-            cityname: "Moga",
-        },
-        {
-            cityname: "Dehradoon",
-        },
-        {
-            cityname: "Amritsar",
-        },
-        {
-            cityname: "Sangrur",
-        },
-        {
-            cityname: "Bathinda",
-
-        },
-        {
-            cityname: "Moga",
-        },
-        {
-            cityname: "Dehradoon",
-        },
-        {
-            cityname: "Amritsar",
-        },
-        {
-            cityname: "Sangrur",
-        },
     ]
+
+      const dispatch = useDispatch()
+        const adddata = (item) =>{
+            // console.log(item)
+            dispatch(pickdatatoSelectCity(item))
+        }
+     
+
     return (
         <>
             <Modal visible={visible} transparent onRequestClose={handleClose}>
@@ -82,6 +86,8 @@ const Navbar = () => {
                                         <TouchableOpacity key={index} onPress={() => {
                                             handleClose()
                                             setselectCity(item.cityname)
+                                            adddata(item)
+                                            
                                         }} style={Styles.CityContainer}>
                                             <Text>{item.cityname}</Text>
                                         </TouchableOpacity>
