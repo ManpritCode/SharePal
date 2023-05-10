@@ -18,7 +18,8 @@ import BottomSection from "../src/HomeScreenComponents/BottomSection";
 import BottomNavigation from "../src/HomeScreenComponents/BottomNavigation";
 import { Dimensions } from 'react-native';
 import Buttons from "../src/DetaileScreenComponents/buttons";
-export default function HomeScreen() {
+
+export default function HomeScreen({navigation}) {
   const windowWidth = Dimensions.get('window').width;
 
   return (
@@ -28,9 +29,9 @@ export default function HomeScreen() {
         <Navbar />
         <ScrollView>
           <ImageCrousel />
-          <ItemsCategories />
+          <ItemsCategories navigation={navigation} />
           <Gaming_Console />
-          <CameraItems />
+          <CameraItems  />
           <RidingGear />
           <Ps5gaming />
           <WinterWear />

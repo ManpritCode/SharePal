@@ -1,7 +1,7 @@
 import react from "react";
-import { View, Text, StyleSheet, ImageBackground, Image } from "react-native"
+import { View, Text, StyleSheet, ImageBackground, Image, TouchableOpacity } from "react-native"
 
-export default function ItemsCategories() {
+export default function ItemsCategories({navigation}) {
 
     const items = [
         {
@@ -39,6 +39,9 @@ export default function ItemsCategories() {
             <Text style={Styles.text}>What would you like to rent?</Text>
             {
                 items.map((item, index) => (
+                    <TouchableOpacity key={index} onPress={()=>{
+                        navigation.navigate('detaile')
+                    }}>
                     <View key={index} style={Styles.itemcontainer}>
                         <ImageBackground source={require('../../Images/items.png')}
                             style={{
@@ -50,9 +53,9 @@ export default function ItemsCategories() {
                             }} >
 
                             <Image source={item.image} style={{
-                                height: 150,
+                                height: 165,
                                 width: 150,
-                                marginTop: 10,
+                                top:15,
                                 resizeMode: "cover"
                             }}>
 
@@ -60,6 +63,7 @@ export default function ItemsCategories() {
                             <Text style={Styles.itemtitle}>{item.title}</Text>
                         </ImageBackground>
                     </View>
+                    </TouchableOpacity>
                 ))
             }
         </View>

@@ -19,7 +19,7 @@ export default function ImageCrousel() {
                 justifyContent: "space-evenly"
             }}>
                 <View style={Styles.Maincontainer}>
-                    <Text style={Styles.Text1}>Your search for the best rental in Raipur ends here!</Text>
+                    <Text style={Styles.Text1}>Your search for the best rental in <Text style={{color:"blue"}}>Raipur</Text> ends here!</Text>
                 </View>
                 <TouchableOpacity style={Styles.TextContainer}>
                     <Text style={Styles.Text2}>
